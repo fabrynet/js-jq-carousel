@@ -10,7 +10,7 @@ $(document).ready(function() {
   nextButton.click(nextImg);
   prevButton.click(prevImg);
   navButton.click(dotNav);
-  //keydown prende il codice di tutti i tasti della tastiera
+  // l'evento keydown intercetta il codice di tutti i tasti della tastiera
   $(document).keydown(keyPrevNext);
 });
 
