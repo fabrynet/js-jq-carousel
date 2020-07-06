@@ -27,8 +27,8 @@ function nextImg() {
     imgFirst.addClass('active');
     iFirst.addClass('active');
   } else {
-    imgActive.next().addClass('active');
-    iActive.next().addClass('active');
+    imgActive.next("img").addClass('active');
+    iActive.next("i").addClass('active');
   }
 }
 function prevImg() {
@@ -43,8 +43,8 @@ function prevImg() {
     imgLast.addClass('active');
     iLast.addClass('active');
   } else {
-    imgActive.prev().addClass('active');
-    iActive.prev().addClass('active');
+    imgActive.prev("img").addClass('active');
+    iActive.prev("i").addClass('active');
   }
 }
 function dotNav() {
@@ -55,7 +55,7 @@ function dotNav() {
   dot.removeClass('active');
   $(this).addClass('active');
   img.removeClass('active');
-  $(img.get(position)).addClass('active');
+  $(img).eq(position).addClass('active');
 }
 function keyPrevNext() {
   //keyCode e which per supporto cross browser
